@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StaffSync | Find · Hire · Grow</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-view="login">
+
+  <main class="view view-login" id="loginView">
+
+    <section class="hero">
+      <h1>We See Potential<br>Behind Every Profile</h1>
+    </section>
+
+    <section class="login-side">
+      <nav class="nav" aria-label="Main">
+        <a href="#" class="nav-link is-active">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Jobs</a>
+        <a href="#" class="nav-link">Contacts</a>
+      </nav>
+
+      <a href="#" class="job-pill">I’m looking for a job</a>
+
+      <div class="card card-login">
+        <div class="logo">
+          <img src="StaffSync Logo.png" alt="StaffSync - Find, Hire, Grow" class="logo-img">
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <i class="fa-regular fa-envelope field-icon"></i>
+            <input type="text" id="loginUser" name="user" placeholder="Email/Username" autocomplete="username">
+            <button type="button" class="clear-btn" aria-label="Clear field">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+          </div>
+          <p class="error" data-for="loginUser"></p>
+
+          <div class="field">
+            <i class="fa-solid fa-hand field-icon"></i>
+            <input type="password" id="loginPass" name="password" placeholder="Password" autocomplete="current-password">
+            <button type="button" class="toggle-pass" aria-label="Show password">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+            <button type="button" class="clear-btn" aria-label="Clear field">
+              <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+          </div>
+          <p class="error" data-for="loginPass"></p>
+
+          <a href="#" class="forgot">FORGOT PASSWORD</a>
+
+          <div class="actions">
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn" data-go="signup">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign up
+            </button>
+          </div>
+
+          <p class="form-msg" id="loginMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <main class="view view-signup" id="signupView">
+
+    <nav class="nav nav-top" aria-label="Main">
+      <a href="#" class="nav-link is-active">Home</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Jobs</a>
+      <a href="#" class="nav-link">Contacts</a>
+    </nav>
+
+    <div class="card card-signup">
+      <div class="logo">
+        <img src="StaffSync Logo.png" alt="StaffSync - Find, Hire, Grow" class="logo-img">
+      </div>
+
+      <form id="signupForm" novalidate>
+        <div class="field">
+          <i class="fa-regular fa-envelope field-icon"></i>
+          <input type="email" id="suEmail" placeholder="Email" autocomplete="email">
+          <button type="button" class="clear-btn" aria-label="Clear field">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
+        </div>
+        <p class="error" data-for="suEmail"></p>
+
+        <div class="field">
+          <i class="fa-regular fa-circle-user field-icon"></i>
+          <input type="text" id="suUser" placeholder="Username" autocomplete="username">
+          <button type="button" class="clear-btn" aria-label="Clear field">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
+        </div>
+        <p class="error" data-for="suUser"></p>
+
+        <div class="field">
+          <i class="fa-solid fa-hand field-icon"></i>
+          <input type="password" id="suPass" placeholder="Password" autocomplete="new-password">
+          <button type="button" class="toggle-pass" aria-label="Show password">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+          <button type="button" class="clear-btn" aria-label="Clear field">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
+        </div>
+        <p class="error" data-for="suPass"></p>
+
+        <div class="field">
+          <i class="fa-solid fa-hand field-icon"></i>
+          <input type="password" id="suPass2" placeholder="Re-enter Password" autocomplete="new-password">
+          <button type="button" class="toggle-pass" aria-label="Show password">
+            <i class="fa-regular fa-eye"></i>
+          </button>
+          <button type="button" class="clear-btn" aria-label="Clear field">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
+        </div>
+        <p class="error" data-for="suPass2"></p>
+
+        <div class="field">
+          <i class="fa-solid fa-phone field-icon"></i>
+          <input type="tel" id="suContact" placeholder="Contact" autocomplete="tel">
+          <button type="button" class="clear-btn" aria-label="Clear field">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
+        </div>
+        <p class="error" data-for="suContact"></p>
+
+        <div class="actions">
+          <button type="button" class="btn" data-go="login">Login</button>
+          <button type="submit" class="btn">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign up
+          </button>
+        </div>
+
+        <p class="form-msg" id="signupMsg" role="status"></p>
+      </form>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
